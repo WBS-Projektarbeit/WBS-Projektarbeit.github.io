@@ -160,6 +160,9 @@ $(document).ready(function() {
     var formData = $(this).serialize();
     $.ajax({
       type: 'POST',
+      headers: {
+                'Accept': 'application/json'
+        },
       url: $(this).attr('action') || window.location.pathname,
       data: $(this).serialize(),
       success: function(response) {
